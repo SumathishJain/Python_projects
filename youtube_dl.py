@@ -9,7 +9,7 @@ def download_youtube_playlist(playlist_url, output_path=".", start_video=1, end_
         'noplaylist': False,
         'playliststart': start_video,
     }
-    if end_video:  # Add playlistend if specified
+    if end_video:
         ydl_opts['playlistend'] = end_video
 
     try:
@@ -21,8 +21,8 @@ def download_youtube_playlist(playlist_url, output_path=".", start_video=1, end_
 
 if __name__ == "__main__":
     url = input("Enter the YouTube playlist URL: ")
-    start = int(input("Enter the starting video number: "))  # Specify start video
+    start = int(input("Enter the starting video number: "))
     end = input("Enter the ending video number (leave blank for full playlist): ")
-    end = int(end) if end else None  # Convert input to integer or leave as None
+    end = int(end) if end else None
     output_directory = r'C:\Users\SUMATHISH JAIN B R\Videos'
     download_youtube_playlist(url, output_directory, start, end)
