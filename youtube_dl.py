@@ -24,5 +24,5 @@ if __name__ == "__main__":
     start = int(input("Enter the starting video number: "))
     end = input("Enter the ending video number (leave blank for full playlist): ")
     end = int(end) if end else None
-    output_directory = r'C:\Users\SUMATHISH JAIN B R\Videos'
+    output_directory = r'your path'
     download_youtube_playlist(url, output_directory, start, end)
